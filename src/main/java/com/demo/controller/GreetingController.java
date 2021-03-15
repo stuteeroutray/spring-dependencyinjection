@@ -1,23 +1,18 @@
 package com.demo.controller;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
-
 import com.demo.services.HelloWorldService;
 
-@Controller
+//@Controller <-- uncomment for Java Configuration
 public class GreetingController {
 	private HelloWorldService helloWorldService; 
 	private HelloWorldService helloWorldServiceHindi;
 	
-	@Autowired
+	//@Autowired <-- uncomment for Java Configuration
 	public void setHelloWorldService(HelloWorldService helloWorldService) {
 		this.helloWorldService = helloWorldService;
 	}
 	
-	@Autowired
-	@Qualifier("hin")
+	//@Autowired 
+	//@Qualifier("hindi") <-- uncomment for Java Configuration
 	public void setHelloWorldServiceHindi(HelloWorldService helloWorldServiceHindi) {
 		this.helloWorldServiceHindi = helloWorldServiceHindi;
 	}
